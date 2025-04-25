@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmdy5ou5tr3fj"]
+
+[ext_resource type="Texture2D" uid="uid://cb514ecs2c7ff" path="res://assets/sprites/monster.png" id="1_hlggd"]
+[ext_resource type="PackedScene" uid="uid://btd8gsyx7hjrw" path="res://scenes/killzone.tscn" id="2_7wgg4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnpbx"]
+size = Vector2(23, 23)
+
+[node name="big_enemy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.430664, 0.984375, 0.945442, 1)
+position = Vector2(-3.5, 3.5)
+scale = Vector2(1.4375, 1.4375)
+texture = ExtResource("1_hlggd")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="killzone" parent="." instance=ExtResource("2_7wgg4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-3.5, 3.5)
+shape = SubResource("RectangleShape2D_dnpbx")

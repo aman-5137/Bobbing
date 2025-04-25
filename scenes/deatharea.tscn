@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy3gj34aw75dm"]
+
+[ext_resource type="PackedScene" uid="uid://btd8gsyx7hjrw" path="res://scenes/killzone.tscn" id="1_k0gtf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk3f3"]
+size = Vector2(128, 2)
+
+[node name="deatharea" type="Node2D"]
+
+[node name="killzone" parent="." instance=ExtResource("1_k0gtf")]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(56, 10)
+shape = SubResource("RectangleShape2D_uk3f3")

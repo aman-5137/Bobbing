@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=3 uid="uid://c2qalfc3q6qfx"]
+
+[ext_resource type="Script" uid="uid://byfikqhja1hg6" path="res://scripts/game_ended.gd" id="1_xfyws"]
+[ext_resource type="FontFile" uid="uid://c1kqkebl4qmwc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_2b0r1"]
+[ext_resource type="Texture2D" uid="uid://d01yi7j2pk8nu" path="res://assets/background Images/fantasy_background.webp" id="2_nedpb"]
+[ext_resource type="FontFile" uid="uid://bv86dgu58dor1" path="res://assets/fonts/PixelOperator8.ttf" id="3_yb78q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7skxx"]
+texture = ExtResource("2_nedpb")
+region_rect = Rect2(0, 246, 1024, 622)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k435w"]
+bg_color = Color(0.222656, 0.222656, 0.222656, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m0mg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbqab"]
+bg_color = Color(0.67451, 0.0901961, 0.266667, 0.784314)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bm6e3"]
+bg_color = Color(0.552941, 0.0901961, 0.266667, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47wnt"]
+bg_color = Color(0.675781, 0.0897522, 0.268308, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wedw"]
+bg_color = Color(0, 0, 0, 0.635294)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.8, 0.235294)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xfyws")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7skxx")
+
+[node name="theEnd" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 8.0
+offset_right = 250.0
+offset_bottom = 108.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_2b0r1")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_k435w")
+text = "The End"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = -76.0
+offset_right = 100.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_yb78q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7m0mg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbqab")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bm6e3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_47wnt")
+text = "Back To Menu"
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 73.0
+offset_top = 112.0
+offset_right = -62.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3wedw")
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 25.0
+offset_right = -23.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("3_yb78q")
+theme_override_font_sizes/font_size = 24
+text = "Thanks for Playing! 
+Working on this game has been an awesome experience. I hope you liked it. If you found any bug or you think the game needs to be improved on certain part of the maps then please email me on amankkumaryadav5137@gmail.com. Your feedback will only help the game to improve.    "
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 751.5
+offset_top = 373.5
+offset_right = 1102.5
+offset_bottom = 400.5
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("3_yb78q")
+theme_override_font_sizes/font_size = 16
+text = "By : Aman K. Yadav"
+autowrap_mode = 3
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

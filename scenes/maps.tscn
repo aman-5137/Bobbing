@@ -1,0 +1,218 @@
+[gd_scene load_steps=16 format=3 uid="uid://cxn35vij4es3e"]
+
+[ext_resource type="Script" uid="uid://bhq204cbpi1hk" path="res://scripts/maps.gd" id="1_onfd4"]
+[ext_resource type="Texture2D" uid="uid://d7woe36og0cf" path="res://assets/background Images/background.webp" id="2_n2c2q"]
+[ext_resource type="FontFile" uid="uid://c1kqkebl4qmwc" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_8ip65"]
+[ext_resource type="FontFile" uid="uid://bv86dgu58dor1" path="res://assets/fonts/PixelOperator8.ttf" id="4_3cof4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2nui"]
+texture = ExtResource("2_n2c2q")
+region_rect = Rect2(0, 152, 1032, 744)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63d4w"]
+bg_color = Color(0.0846899, 0.0846899, 0.0846899, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsrn0"]
+bg_color = Color(0.336608, 0.336608, 0.336608, 1)
+border_width_left = 14
+border_width_top = 14
+border_width_right = 14
+border_width_bottom = 14
+border_color = Color(0.332881, 0.332881, 0.33288, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tml1j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbe4v"]
+bg_color = Color(0.521569, 0.168627, 0.243137, 0.8)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxy7r"]
+bg_color = Color(0.521569, 0.168627, 0.243137, 0.8)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ea6i"]
+bg_color = Color(0.694118, 0.25098, 0.627451, 0.8)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u833j"]
+bg_color = Color(0.521569, 0.168627, 0.243137, 1)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cof4"]
+bg_color = Color(0.521569, 0.168627, 0.243137, 0.8)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px2nk"]
+bg_color = Color(0.521569, 0.168627, 0.243137, 0.8)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h07o"]
+bg_color = Color(0.521569, 0.168627, 0.243137, 0.8)
+border_width_left = 4
+border_width_top = 4
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 80
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_onfd4")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.882813, 0.882813, 0.882813, 0.980392)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_o2nui")
+
+[node name="back" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 42.0
+offset_right = 125.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_63d4w")
+text = "Back"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 2
+offset_left = 111.0
+offset_top = 126.0
+offset_right = 403.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("3_8ip65")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsrn0")
+text = "MAPS"
+
+[node name="info_label" type="Label" parent="Panel"]
+layout_mode = 2
+anchor_top = 0.767
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+offset_top = -0.0160217
+offset_right = -105.0
+offset_bottom = -61.0
+theme_override_fonts/font = ExtResource("4_3cof4")
+theme_override_font_sizes/font_size = 16
+text = "*Please complete the previous levels to unlock the new ones."
+
+[node name="hbox" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -435.0
+offset_top = -58.0
+offset_right = 471.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level1" type="Button" parent="Panel/hbox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tml1j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nbe4v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxy7r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0ea6i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u833j")
+disabled = true
+text = "1"
+
+[node name="level2" type="Button" parent="Panel/hbox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tml1j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3cof4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxy7r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0ea6i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u833j")
+disabled = true
+text = "2"
+
+[node name="level3" type="Button" parent="Panel/hbox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tml1j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_px2nk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxy7r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0ea6i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u833j")
+disabled = true
+text = "3"
+
+[node name="level4" type="Button" parent="Panel/hbox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tml1j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0h07o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxy7r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0ea6i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u833j")
+disabled = true
+text = "4"
+
+[node name="level5" type="Button" parent="Panel/hbox"]
+layout_mode = 2
+size_flags_horizontal = 7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tml1j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_px2nk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pxy7r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0ea6i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u833j")
+disabled = true
+text = "5"
+
+[connection signal="pressed" from="Panel/back" to="." method="_on_back_pressed_backtomenu"]
+[connection signal="pressed" from="Panel/hbox/level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Panel/hbox/level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Panel/hbox/level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Panel/hbox/level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Panel/hbox/level5" to="." method="_on_level_5_pressed"]
